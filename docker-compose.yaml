@@ -1,0 +1,10 @@
+services:
+  app:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    command: ./.docker/start.sh
+    ports:
+      - "3001:3000"
+    volumes:
+      - .:/home/node/app
